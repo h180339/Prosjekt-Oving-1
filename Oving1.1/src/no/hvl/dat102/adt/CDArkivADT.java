@@ -5,17 +5,44 @@ import no.hvl.dat102.Sjanger;
 
 public interface CDArkivADT {
 	
-	CD[] henteCdTabell(); // returnerer en tabell av cder
+	/**
+	 *returnerer en tabell av cder
+	 */
 	
-	void leggTilCd(CD nyCd);//legger til en ny cd
+	CD[] henteCdTabell(); 
 	
-	boolean slettCd(int cdNr);//sletter cd hvis den finns
+	/**
+	 * legger til en ny cd
+	 */
 	
-	CD[] sokTittel(String delstreng); //s�ker og henter CD-er med en gitt delstreng
+	void leggTilCd(CD nyCd);
+	/**
+	 *sletter cd hvis den finns
+	 */
 	
-	CD[] sokArtist(String delstreng);//s�ker og henter artister med en gitt delstreng
+	boolean slettCd(int cdNr);
 	
-	int hentAntall();//henter antall CDer
+	/**
+	 * s�ker og henter CD-er med en gitt delstreng
+	 */
 	
-	int hentAntall(Sjanger sjanger);//henter antall sjangre
+	CD[] sokTittel(String delstreng);
+	
+	/**
+	 * s�ker og henter artister med en gitt delstreng
+	 */
+	
+	CD[] sokArtist(String delstreng);
+	
+	/**
+	 * henter antall CDer
+	 */
+	
+	int hentAntall();
+	
+	/**
+	 * henter antall sjangre
+	 */
+	
+	int hentAntall(Sjanger sjanger);
 }
